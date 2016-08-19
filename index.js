@@ -32,5 +32,6 @@ log.info = function () {
 function performCheck () {
     if (! window.WP_DEBUG) return false;
     if (! window.console) return false;
+    return true;
 }
 
