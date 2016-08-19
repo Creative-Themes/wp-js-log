@@ -1,31 +1,11 @@
-module.exports = log;
-
-function log () {
-    if (! performCheck()) return false;
-    return window.console.log.apply(window.console, arguments);
-}
-
+var log = performCheck() ? window.console.log : function () {};
 log.log = log;
+log.error = performCheck() ? window.console.error : function () {};
+log.info = performCheck() ? window.console.info : function () {};
+log.debug = performCheck() ? window.console.debug : function () {};
+log.warn = performCheck() ? window.console.warn : function () {};
 
-log.error = function () {
-    if (! performCheck()) return false;
-    return window.console.error.apply(window.console, arguments);
-};
-
-log.warn = function () {
-    if (! performCheck()) return false;
-    return window.console.warn.apply(window.console, arguments);
-};
-
-log.debug = function () {
-    if (! performCheck()) return false;
-    return window.console.debug.apply(window.console, arguments);
-}
-
-log.info = function () {
-    if (! performCheck()) return false;
-    return window.console.info.apply(window.console, arguments);
-}
+module.exports = log;
 
 ////////
 
