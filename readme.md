@@ -24,7 +24,7 @@ if (defined('WP_DEBUG')) {
 	wp_localize_script(
 		'your-handle',
 		'WP_DEBUG',
-		!! defined('WP_DEBUG')
+		array('debug' => true)
 	);
 }
 ```
