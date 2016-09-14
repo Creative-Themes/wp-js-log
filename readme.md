@@ -29,3 +29,8 @@ if (defined('WP_DEBUG')) {
 }
 ```
 
+## License
+
+MIT
+
+![](https://avatars0.githubusercontent.com/u/20202907?v=3&s=200)
