@@ -4,6 +4,7 @@ log.error = performCheck() ? window.console.error : function () {};
 log.info = performCheck() ? window.console.info : function () {};
 log.debug = performCheck() ? window.console.debug : function () {};
 log.warn = performCheck() ? window.console.warn : function () {};
+log.has_debug = performCheck();
 
 module.exports = log;
 
